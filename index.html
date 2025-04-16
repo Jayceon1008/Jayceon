@@ -7,7 +7,7 @@
     body {
       margin: 0;
       font-family: 'Georgia', serif;
-      background-color: #fffdf9;
+      background: linear-gradient(to bottom right, #fffafc, #e0f7fa, #fce4ec);
       color: #333;
     }
     header {
@@ -16,22 +16,25 @@
       text-align: center;
     }
     header img {
-      max-width: 100%;
+      max-width: 250px;
       height: auto;
     }
     nav {
       background-color: #f2f2f2;
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       justify-content: center;
-      padding: 0.5rem;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 0.5rem 0;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
     nav a {
+      display: inline-block;
       color: #444;
       text-decoration: none;
       padding: 0.5rem 1rem;
-      margin: 0.25rem;
+      margin: 0 0.25rem;
       border-radius: 8px;
       transition: background-color 0.3s;
     }
