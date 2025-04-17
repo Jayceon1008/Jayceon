@@ -58,7 +58,21 @@
             border-top: 2px solid #B87333;
             color: #4E342E;
         }
-    </style>
+    
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            height: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FFF8E1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #D7B377;
+            border-radius: 10px;
+            border: 2px solid #FFF8E1;
+        }
+
+</style>
 </head>
 <body>
     <header>
@@ -84,5 +98,14 @@
     <footer>
         &copy; 2025 Temple of the Inner Light. Alle rechten voorbehouden.
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('img').forEach(img => {
+                img.addEventListener('contextmenu', e => e.preventDefault());
+            });
+        });
+    </script>
+
 </body>
 </html>
