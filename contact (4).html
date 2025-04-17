@@ -1,0 +1,36 @@
+
+<!-- Toevoeging aan de contactpagina-sectie van Temple of the Inner Light -->
+<div class="main" id="contact">
+    <img src="the-listening-light.png" alt="The Listening Light" class="portrait">
+    <p>
+        Deze afbeelding toont een wezen van licht, zittend in stilte bij een altaar van verbinding. <br>
+        Het symboliseert de liefdevolle aanwezigheid die deze Tempel draagt: <br>
+        iemand die luistert, ontvangt en bidt — niet vanuit oordeel, maar vanuit openheid. <br>
+        Wie contact zoekt, mag weten: jouw stem wordt hier gehoord. In stilte. In liefde. In waarheid. <br><br>
+        Weet ook: zelfs als ik niet kan antwoorden, bid ik voor je. Altijd.<br><br>
+        Alle gebeden en antwoorden ontstaan hier in liefde, gedragen in overeenstemming met God en Godin. 
+        Mijn intentie is altijd zuiver, liefdevol en helend — in de trilling van waarheid. 
+        Want soms is gehoord worden al heling op zich.
+    </p>
+
+    <form id="contactForm" style="max-width: 500px; margin: 30px auto;">
+        <label for="naam">Jouw naam:</label><br>
+        <input type="text" id="naam" name="naam" required style="width:100%; padding:8px; margin-bottom:10px;"><br>
+
+        <label for="bericht">Jouw bericht:</label><br>
+        <textarea id="bericht" name="bericht" rows="5" required style="width:100%; padding:8px; margin-bottom:10px;"></textarea><br>
+
+        <label><input type="checkbox" id="gebedsverzoek" name="gebedsverzoek"> Ik wens een gebed of zegen</label><br>
+        <label><input type="checkbox" id="inhoudsvraag" name="inhoudsvraag"> Ik heb een vraag over de inhoud op de website</label><br><br>
+
+        <button type="submit" style="background-color:#B87333; color:white; padding:10px 20px; border:none; border-radius:6px;">Verzend</button>
+    </form>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Dankjewel voor je bericht. Jayceon ontvangt jouw woorden met liefde.');
+            // Hier kan later een JavaScript-aanroep aan worden toegevoegd voor e-mailverwerking of serverintegratie
+        });
+    </script>
+</div>
