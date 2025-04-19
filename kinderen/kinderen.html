@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kinderen en innerlijk kind – Temple of the Inner Light</title>
+    <title>Kinderen en Innerlijk Kind – Temple of the Inner Light</title>
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <style>
         body {
@@ -57,33 +57,64 @@
             border-top: 2px solid #B87333;
             color: #4E342E;
         }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            height: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F3E9DC;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #D7B377;
+            border-radius: 10px;
+            border: 2px solid #F3E9DC;
+        }
     </style>
 </head>
 <body>
     <header>
-        <img src="tempel-header-logo.png" alt="Tempellogo" class="portrait">
+        <img src="../tempel-header-logo.png" alt="Tempellogo" class="portrait">
     </header>
-    
-<div class="navbar">
-    <a href="../index.html">Home</a>
-        <a href="..rituelen/rituelen.html">Rituelen en Levensstijl</a>
-        <a href="..muziek/muziek.html">Muziek</a>
-        <a href="..beweging/beweging.html">Beweging en Gezondheid</a>
-        <a href="..keuken/keuken.html">In de Keuken</a>
-        <a href="kinderen/kinderen.html">Kinderen en innerlijk kind</a>
-        <a href="..reis/reis.html">Op reis</a>
-        <a href="..aarde/aarde.html">Samenleven met de Aarde</a>
-        <a href="..overmij/overmij.html">Over mij</a>
-        <a href="..contact/contact.html">Contact</a>
-        <a href="..donaties/donaties.html">Donaties</a>
-</div>
+    <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="../rituelen/rituelen.html">Rituelen en Levensstijl</a>
+        <a href="../muziek/muziek.html">Muziek</a>
+        <a href="../beweging/beweging.html">Beweging en Gezondheid</a>
+        <a href="../keuken/keuken.html">In de Keuken</a>
+        <a href="../kinderen/kinderen.html">Kinderen en innerlijk kind</a>
+        <a href="../reis/reis.html">Op reis</a>
+        <a href="../aarde/aarde.html">Samenleven met de Aarde</a>
+        <a href="../overmij/overmij.html">Over mij</a>
+        <a href="../contact/contact.html">Contact</a>
+        <a href="../donaties/donaties.html">Donaties</a>
+    </div>
 
     <div class="main">
-        <img src="kinderen.png" alt="Kinderen en innerlijk kind" class="portrait">
-        <p>Welkom op de pagina Kinderen en innerlijk kind. Deze ruimte is nog in opbouw en zal zich binnenkort verder ontvouwen.</p>
+        <img src="kinderen.png" alt="Innerlijk Kind" class="portrait">
+        <p>
+            Welkom, lief kind –<br>
+            klein of groot, in jaren of in gevoel.<br><br>
+            Hier is ruimte om te kleuren, te lachen, te helen.<br>
+            Hier leeft verwondering.<br><br>
+            Het innerlijke kind wordt hier gevoed,<br>
+            met zachte woorden, spel, licht en troost.<br><br>
+            Alles mag bestaan, alles mag herontdekt worden.<br>
+            En elke tekening is een gebed<br>
+            in kleur en liefde.
+        </p>
     </div>
+
     <footer>
         &copy; 2025 Temple of the Inner Light. Alle rechten voorbehouden.
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('img').forEach(img => {
+                img.addEventListener('contextmenu', e => e.preventDefault());
+            });
+        });
+    </script>
 </body>
 </html>
