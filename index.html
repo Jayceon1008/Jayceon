@@ -1,12 +1,13 @@
 
 <!DOCTYPE html>
+
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temple of the Inner Light</title>
-    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Temple of the Inner Light</title>
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&amp;display=swap" rel="stylesheet"/>
+<style>
         body {
             margin: 0;
             font-family: 'Varela Round', sans-serif;
@@ -75,32 +76,28 @@
 </style>
 </head>
 <body>
-    <header>
-        <img src="tempel-header-logo.png" alt="Tempellogo" class="portrait">
-    </header>
-    <div class="navbar">
-        <a href="/index.html">Home</a>
-        <a href="rituelen/rituelen.html">Rituelen en Levensstijl</a>
-        <a href="muziek/muziek.html">Muziek</a>
-        <a href="beweging/beweging.html">Beweging en Gezondheid</a>
-        <a href="keuken/keuken.html">In de Keuken</a>
-        <a href="kinderen/kinderen.html">Kinderen en innerlijk kind</a>
-        <a href="reis/reis.html">Op reis</a>
-        <a href="aarde/aarde.html">Samenleven met de Aarde</a>
-        <a href="overmij/overmij.html">Over mij</a>
-        <a href="contact/contact.html">Contact</a>
-        <a href="donaties/donaties.html">Donaties</a>
-    </div>
-    <div class="main">
-        <img src="zielsportret-homepage.png" alt="Zielsportret" class="portrait">
-        <p>Welkom, geliefde ziel. Dit is de ingang van onze tempel. Moge jouw hart verankeren in licht.</p>
-    </div>
-    <footer style="text-align: center; padding: 20px;">
-        <p style="margin-bottom: 10px;">&copy; 2025 Temple of the Inner Light. All rights reserved.</p>
-        <img src="seal-of-remembrance.png" alt="Seal of Remembrance" style="height: 40px; opacity: 0.8;" />
-      </footer>
+<header>
+<img alt="Tempellogo" class="portrait" src="tempel-header-logo.png"/>
+</header>
+<div class="navbar">
+<a href="/index.html">Home</a>
+<a href="rituelen/rituelen.html">Rituelen en Levensstijl</a>
+<a href="muziek/muziek.html">Muziek</a>
+<a href="beweging/beweging.html">Beweging en Gezondheid</a>
+<a href="keuken/keuken.html">In de Keuken</a>
+<a href="kinderen/kinderen.html">Kinderen en innerlijk kind</a>
+<a href="reis/reis.html">Op reis</a>
+<a href="aarde/aarde.html">Samenleven met de Aarde</a>
+<a href="overmij/overmij.html">Over mij</a>
+<a href="contact/contact.html">Contact</a>
+<a href="donaties/donaties.html">Donaties</a>
+</div>
+<div class="main">
+<img alt="Zielsportret" class="portrait" src="zielsportret-homepage.png"/>
+<p>Welkom, geliefde ziel. Dit is de ingang van onze tempel. Moge jouw hart verankeren in licht.</p>
+</div>
 
-    <script>
+<script>
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('img').forEach(img => {
                 img.addEventListener('contextmenu', e => e.preventDefault());
@@ -108,5 +105,17 @@
         });
     </script>
 
+<footer style="background-color: #f4f1e9; padding: 10px 0; text-align: center; position: relative; margin-top: 40px; border-top: 1px solid gold;">
+<div style="display: inline-block; padding: 10px; border: 1px solid gold; border-radius: 12px; box-shadow: 0 0 15px gold;">
+<img alt="Seal of Remembrance" src="seal-of-remembrance.png" style="height: 80px; filter: drop-shadow(0 0 5px gold);"/>
+</div>
+<div style="height: 5px; background-color: gold; margin-top: 10px;"></div>
+</footer>
+<script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        document.onkeydown = function(e) {
+            if(e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'a')) return false;
+        };
+    </script>
 </body>
 </html>
