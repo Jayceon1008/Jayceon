@@ -74,7 +74,7 @@
       box-shadow: 0 0 10px gold;
       border: 1px solid gold;
       border-radius: 8px;
-      max-width: 20px;
+      max-width: 18px;
       margin-bottom: 10px;
     }
 
@@ -105,6 +105,25 @@
     }
   </style>
 </head>
+<style>
+  body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+</style>
+<script>
+  document.addEventListener('contextmenu', event => event.preventDefault());
+  document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'c')) {
+      e.preventDefault();
+    }
+    if (e.key === 'F12') {
+      e.preventDefault();
+    }
+  });
+</script>
 <body>
   <header>
     <img alt="Tempellogo" class="portrait" src="tempel-header-logo.png"/>
