@@ -183,16 +183,5 @@ overflow-x: hidden;
         <div class="copyright">© 2025 Temple of the Inner Light</div>
       </footer>
     
-      <script>
-        document.addEventListener('DOMContentLoaded', () => {
-          document.querySelectorAll('img').forEach(img => {
-            img.addEventListener('contextmenu', e => e.preventDefault());
-          });
-        });
-        document.addEventListener('contextmenu', event => event.preventDefault());
-        document.onkeydown = function(e) {
-          if(e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'a')) return false;
-        };
-      </script>
     </body>
     </html>

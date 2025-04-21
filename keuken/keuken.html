@@ -165,7 +165,7 @@ overflow-x: hidden;
 <a href="../aarde/aarde.html">Samenleven met de Aarde</a>
 <a href="../overmij/overmij.html">Over mij</a>
 <a href="../contact/contact.html">Contact</a>
-<a href="..//donties/donaties.html">Donaties</a>
+<a href="../donties/donaties.html">Donaties</a>
 </div>
 <div class="main">
 <img alt="Keuken Altaar" class="portrait" src="keuken.png" style="style='border: 2px solid gold; box-shadow: 0 0 10px gold; border-radius: 8px;'"/>
@@ -186,16 +186,5 @@ overflow-x: hidden;
         <div class="copyright">© 2025 Temple of the Inner Light</div>
       </footer>
     
-      <script>
-        document.addEventListener('DOMContentLoaded', () => {
-          document.querySelectorAll('img').forEach(img => {
-            img.addEventListener('contextmenu', e => e.preventDefault());
-          });
-        });
-        document.addEventListener('contextmenu', event => event.preventDefault());
-        document.onkeydown = function(e) {
-          if(e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'a')) return false;
-        };
-      </script>
     </body>
     </html>
