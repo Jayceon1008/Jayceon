@@ -215,10 +215,13 @@ overflow-x: hidden;
     Alles wat ik doe, doe ik in liefde en met toewijding aan God en Godin. <br />
     Als ik je niet antwoord, weet dan: ik heb je gehoord. Ik bid voor je.
   </p>
-  <form action="mailto:jayceoneldarion@proton.me" method="post" enctype="text/plain">
+  <form name="contact" method="POST" data-netlify="true" action="/bedankt.html">
+    <input type="hidden" name="form-name" value="contact">
+    
     <input type="text" name="naam" placeholder="Jouw naam" required>
     <input type="email" name="email" placeholder="Jouw e-mailadres" required>
     <textarea name="bericht" placeholder="Je bericht..." rows="6" required></textarea>
+    
     <button type="submit">Verzend</button>
   </form>
 </div>
