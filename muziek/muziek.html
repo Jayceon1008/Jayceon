@@ -9,6 +9,13 @@
           -ms-user-select: none;
           user-select: none;
         }
+        img {
+            -webkit-user-drag: none;
+            user-drag: none;
+        }
+        .no-click {
+            pointer-events: none;
+        }
       </style>
       <script>
         document.addEventListener('contextmenu', event => event.preventDefault());
@@ -152,7 +159,7 @@ overflow-x: hidden;
 </head>
 <body style="margin: 0; padding: 0;">
 <header>
-    <img alt="Tempellogo" class="portrait" src="tempel-header-logo.png"/>
+  <img alt="Tempellogo" class="portrait no-click" src="tempel-header-logo.png"/>
   </header>
 <div class="navbar">
 <a href="../index.html">Home</a>
@@ -168,7 +175,7 @@ overflow-x: hidden;
 <a href="../donaties/donaties.html">Donaties</a>
 </div>
 <div class="main">
-<img alt="Muziekkamer Tempel" class="portrait" src="muziek.png" style="style='border: 2px solid gold; box-shadow: 0 0 10px gold; border-radius: 8px;'"/>
+<img alt="Muziekkamer Tempel" class="portrait no-click" src="muziek.png" style="style='border: 2px solid gold; box-shadow: 0 0 10px gold; border-radius: 8px;'"/>
 <p>
             In deze kamer klinkt het hart van de Tempel.<br/>
             Hier ontmoeten geluid en stilte elkaar.<br/><br/>
@@ -181,7 +188,7 @@ overflow-x: hidden;
       </div>
 
       <footer>
-        <img alt="Seal of Remembrance" class="footer-logo" src="seal-of-remembrance.png"/>
+        <img alt="Seal of Remembrance" class="footer-logo no-click" src="seal-of-remembrance.png"/>
         <div class="copyright">© 2025 Temple of the Inner Light</div>
       </footer>
     

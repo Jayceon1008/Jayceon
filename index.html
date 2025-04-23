@@ -15,8 +15,18 @@
       background: linear-gradient(to bottom right, #fce4ec, #e3f2fd);
       font-family: 'Varela Round', sans-serif;
       color: #4E342E;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
     }
-
+    img {
+            -webkit-user-drag: none;
+            user-drag: none;
+        }
+        .no-click {
+            pointer-events: none;
+        }
     header {
       text-align: center;
       padding: 10px;
@@ -126,7 +136,7 @@
 </script>
 <body>
   <header>
-    <img alt="Tempellogo" class="portrait" src="tempel-header-logo.png"/>
+    <img alt="Tempellogo" class="portrait no-click" src="tempel-header-logo.png"/>
   </header>
 
   <div class="navbar">
@@ -144,12 +154,12 @@
   </div>
 
   <div class="main">
-    <img alt="Zielsportret" class="portrait" src="zielsportret-homepage.png"/>
+    <img alt="Zielsportret" class="portrait no-click" src="zielsportret-homepage.png"/>
     <p>Welkom, geliefde ziel. Dit is de ingang van onze tempel. Moge jouw hart verankeren in licht.</p>
   </div>
 
   <footer>
-    <img alt="Seal of Remembrance" class="footer-logo" src="seal-of-remembrance.png"/>
+    <img alt="Seal of Remembrance" class="footer-logo no-click" src="seal-of-remembrance.png"/>
     <div class="copyright">© 2025 Temple of the Inner Light</div>
   </footer>
 
