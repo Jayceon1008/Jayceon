@@ -21,6 +21,13 @@
             -ms-user-select: none;
             user-select: none;
         }
+        img {
+            -webkit-user-drag: none;
+            user-drag: none;
+        }
+        .no-click {
+            pointer-events: none;
+        }
         header, footer {
             text-align: center;
             background-color: #F3E9DC;
@@ -31,6 +38,8 @@
             display: flex;
             overflow-x: auto;
             white-space: nowrap;
+            background-color: #F3E9DC;
+            border-bottom: 4px solid #B87333;
         }
         .navbar a {
             flex: 0 0 320px;
@@ -70,21 +79,19 @@
             font-size: 1.2em;
             border: 2px solid #4E342E;
             width: 333px;
-            height: 111px;
-            line-height: 36px;
+            height: auto;
             box-sizing: border-box;
-            overflow: hidden;
+            text-align: center;
+            white-space: normal;
         }
-            @media (max-width: 600px){
-                .category-link {
-                    width: 95;
-                    font-size: 1em;
-                    white-space: normal;                    
-                }
-            }
-    
         .category-link:hover {
             background-color: #bfa87d;
+        }
+        @media (max-width: 600px){
+            .category-link {
+                width: 90%;
+                font-size: 1em;
+            }
         }
         .symbol {
             font-size: 2em;
@@ -114,12 +121,6 @@
             border-radius: 10px;
             border: 2px solid #F3E9DC;
         }
-        @media (max-width: 400px) {
-            .category-link {
-                width: 90%;
-                height: 60px;
-            }
-        }
     </style>
     <script>
         document.addEventListener('contextmenu', event => event.preventDefault());
@@ -135,7 +136,7 @@
 </head>
 <body>
 <header>
-    <img alt="Tempellogo" class="portrait" src="tempel-header-logo.png"/>
+    <img alt="Tempellogo" class="portrait no-click" src="tempel-header-logo.png"/>
 </header>
 <div class="navbar">
     <a href="../index.html">Home</a>
@@ -151,7 +152,7 @@
     <a href="../donaties/donaties.html">Donaties</a>
 </div>
 <div class="main">
-    <img alt="Innerlijk Kind" class="portrait" src="kinderen.png"/>
+    <img alt="Innerlijk Kind" class="portrait no-click" src="kinderen.png"/>
     <p>Welkom, lief kind –<br/> klein of groot, in jaren of in gevoel.<br/><br/>
     Hier is ruimte om te kleuren, te lachen, te helen.<br/>
     Hier leeft verwondering.<br/><br/>
@@ -195,7 +196,7 @@
     </section>
 </div>
 <footer>
-    <img alt="Seal of Remembrance" class="footer-logo" src="seal-of-remembrance.png"/>
+    <img alt="Seal of Remembrance" class="footer-logo no-click" src="seal-of-remembrance.png"/>
     <div class="copyright">© 2025 Temple of the Inner Light</div>
 </footer>
 </body>
