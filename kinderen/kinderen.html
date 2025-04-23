@@ -1,186 +1,156 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html lang="nl" style="margin: 0; padding: 0; overflow-x: hidden;">
 <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Kinderen en Innerlijk Kind – Temple of the Inner Light</title>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"/>
     <style>
         body {
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          -ms-user-select: none;
-          user-select: none;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            background: linear-gradient(to bottom right, #fce4ec, #e3f2fd);
+            font-family: 'Varela Round', sans-serif;
+            color: #4E342E;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
-      </style>
-      <script>
+        header, footer {
+            text-align: center;
+            background-color: #F3E9DC;
+            border-top: 4px solid #B87333;
+            border-bottom: 4px solid #B87333;
+        }
+        .navbar {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        .navbar a {
+            flex: 0 0 320px;
+            padding: 14px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            color: goldenrod;
+            font-weight: bold;
+            border-right: 1px solid #B87333;
+        }
+        .navbar a:last-child {
+            border-right: none;
+        }
+        .main {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .portrait {
+            max-width: 300px;
+            width: 100%;
+            border: 2px solid gold;
+            box-shadow: 0 0 10px gold;
+            border-radius: 8px;
+            margin: 20px auto;
+        }
+        .category-link {
+            background-color: #D7B377;
+            color: #4E342E;
+            padding: 12px 30px;
+            margin: 20px 0;
+            display: inline-block;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            border: 2px solid #4E342E;
+            width: 300px;
+            height: 60px;
+            line-height: 36px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .category-link:hover {
+            background-color: #bfa87d;
+        }
+        .symbol {
+            font-size: 2em;
+            color: #D7B377;
+            margin: 20px 0;
+        }
+        .footer-logo {
+            box-shadow: 0 0 10px gold;
+            border: 1px solid gold;
+            border-radius: 8px;
+            max-width: 18px;
+            margin-bottom: 10px;
+        }
+        .copyright {
+            color: #4E342E;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        ::-webkit-scrollbar {
+            height: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F3E9DC;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #D7B377;
+            border-radius: 10px;
+            border: 2px solid #F3E9DC;
+        }
+        @media (max-width: 400px) {
+            .category-link {
+                width: 90%;
+                height: 60px;
+            }
+        }
+    </style>
+    <script>
         document.addEventListener('contextmenu', event => event.preventDefault());
         document.addEventListener('keydown', function(e) {
-          if (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'c')) {
-            e.preventDefault();
-          }
-          if (e.key === 'F12') {
-            e.preventDefault();
-          }
+            if (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'c')) {
+                e.preventDefault();
+            }
+            if (e.key === 'F12') {
+                e.preventDefault();
+            }
         });
-      </script>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Kinderen en Innerlijk Kind – Temple of the Inner Light</title>
-<link href="https://fonts.googleapis.com/css2?family=Varela+Round&amp;display=swap" rel="stylesheet"/>
-<style>
-    html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-  background: linear-gradient(to bottom right, #fce4ec, #e3f2fd);
-  font-family: 'Varela Round', sans-serif;
-  color: #4E342E;
-}
-
-header {
-  text-align: center;
-  padding: 10px;
-}
-
-.navbar {
-  display: flex;
-  overflow-x: auto;
-  white-space: nowrap;
-  background-color: #F3E9DC;
-  border-top: 4px solid #B87333;
-  border-bottom: 4px solid #B87333;
-}
-
-.navbar a {
-  flex: 0 0 320px;
-  padding: 14px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  text-decoration: none;
-  color: goldenrod;
-  font-weight: bold;
-  border-right: 1px solid #B87333;
-}
-
-.navbar a:last-child {
-  border-right: none;
-}
-
-.main {
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.portrait {
-  max-width: 300px;
-  width: 100%;
-  border: 2px solid gold;
-  box-shadow: 0 0 10px gold;
-  border-radius: 8px;
-  margin: 20px auto;
-}
-
-footer {
-  background-color: #F3E9DC;
-  padding: 6x 0;
-  text-align: center;
-  border-top: 4px solid #B87333;
-  border-bottom: 4px solid #B87333;
-}
-
-.footer-logo {
-  box-shadow: 0 0 10px gold;
-  border: 1px solid gold;
-  border-radius: 8px;
-  max-width: 9px;
-  margin-bottom: 10px;
-}
-
-.copyright {
-  color: #4E342E;
-  font-size: 0.9em;
-  margin-top: 5px;
-}
-
-::-webkit-scrollbar {
-  height: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #F3E9DC;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #D7B377;
-  border-radius: 10px;
-  border: 2px solid #F3E9DC;
-}
-
-img[src$=".png"] {
-  border: 2px solid gold;
-  box-shadow: 0 0 12px rgba(255, 215, 0, 0.6);
-  border-radius: 8px;
-}
-</style>
-<style>
-.footer-logo {
-box-shadow: 0 0 10px gold;
-border: 1px solid gold;
-border-radius: 8px;
-max-width: 18px;
-margin-bottom: 10px;
-}
-.footer {
-background-color: #e8dfc8;
-padding: 10px;
-text-align: center;
-border-top: 4px solid #bfa87d;
-border-bottom: 4px solid #bfa87d;
-}
-body {
-margin: 0;
-padding: 0;
-overflow-x: hidden;
-}
-html {
-scroll-behavior: smooth;
-overflow-x: hidden;
-}
-</style>
+    </script>
 </head>
-<body style="margin: 0; padding: 0;">
+<body>
 <header>
     <img alt="Tempellogo" class="portrait" src="tempel-header-logo.png"/>
-  </header>
+</header>
 <div class="navbar">
-<a href="../index.html">Home</a>
-<a href="../rituelen/rituelen.html">Rituelen en Levensstijl</a>
-<a href="../muziek/muziek.html">Muziek</a>
-<a href="../beweging/beweging.html">Beweging en Gezondheid</a>
-<a href="../keuken/keuken.html">In de Keuken</a>
-<a href="../kinderen/kinderen.html">Kinderen en innerlijk kind</a>
-<a href="../reis/reis.html">Op reis</a>
-<a href="../aarde/aarde.html">Samenleven met de Aarde</a>
-<a href="../overmij/overmij.html">Over mij</a>
-<a href="../contact/contact.html">Contact</a>
-<a href="../donaties/donaties.html">Donaties</a>
+    <a href="../index.html">Home</a>
+    <a href="../rituelen/rituelen.html">Rituelen en Levensstijl</a>
+    <a href="../muziek/muziek.html">Muziek</a>
+    <a href="../beweging/beweging.html">Beweging en Gezondheid</a>
+    <a href="../keuken/keuken.html">In de Keuken</a>
+    <a href="../kinderen/kinderen.html">Kinderen en innerlijk kind</a>
+    <a href="../reis/reis.html">Op reis</a>
+    <a href="../aarde/aarde.html">Samenleven met de Aarde</a>
+    <a href="../overmij/overmij.html">Over mij</a>
+    <a href="../contact/contact.html">Contact</a>
+    <a href="../donaties/donaties.html">Donaties</a>
 </div>
 <div class="main">
-<img alt="Innerlijk Kind" class="portrait" src="kinderen.png" style="style='border: 2px solid gold; box-shadow: 0 0 10px gold; border-radius: 8px;'"/>
-<p>
-            Welkom, lief kind –<br/>
-            klein of groot, in jaren of in gevoel.<br/><br/>
-            Hier is ruimte om te kleuren, te lachen, te helen.<br/>
-            Hier leeft verwondering.<br/><br/>
-            Het innerlijke kind wordt hier gevoed,<br/>
-            met zachte woorden, spel, licht en troost.<br/><br/>
-            Alles mag bestaan, alles mag herontdekt worden.<br/>
-            En elke tekening is een gebed<br/>
-            in kleur en liefde.
-        </p>
-        <div class="symbol">♥</div>
+    <img alt="Innerlijk Kind" class="portrait" src="kinderen.png"/>
+    <p>Welkom, lief kind –<br/> klein of groot, in jaren of in gevoel.<br/><br/>
+    Hier is ruimte om te kleuren, te lachen, te helen.<br/>
+    Hier leeft verwondering.<br/><br/>
+    Het innerlijke kind wordt hier gevoed,<br/> met zachte woorden, spel, licht en troost.<br/><br/>
+    Alles mag bestaan, alles mag herontdekt worden.<br/>
+    En elke tekening is een gebed<br/> in kleur en liefde.</p>
+    <div class="symbol">♥</div>
     <section id="goddelijk-wezens">
         <a href="god/goddelijke-wezens.html" class="category-link">God Godin in Zijn Haar vormen</a>
         <p>In deze wereld ontmoet je de energieën van goddelijke vormen – manifestaties van het hogere, die licht, kracht en liefde belichamen in allerlei tradities. Hier vind je kleurplaten die verbinden met de goddelijke aanwezigheid in al haar gedaanten.</p>
@@ -216,11 +186,9 @@ overflow-x: hidden;
         <p>Een open blik naar de sterren, de ruimte waar andere vormen van leven en bewustzijn bestaan. Kleurplaten die nieuwsgierigheid wekken naar het onbekende, naar buitenaardse vrienden, sterrenvolkeren en galactische werelden.</p>
     </section>
 </div>
-
 <footer>
-  <img alt="Seal of Remembrance" class="footer-logo" src="seal-of-remembrance.png"/>
-  <div class="copyright">© 2025 Temple of the Inner Light</div>
+    <img alt="Seal of Remembrance" class="footer-logo" src="seal-of-remembrance.png"/>
+    <div class="copyright">© 2025 Temple of the Inner Light</div>
 </footer>
-
 </body>
 </html>
