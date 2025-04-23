@@ -1,0 +1,124 @@
+<!DOCTYPE html><html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goddelijke Wezens – Kleurplaten</title>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Varela Round', sans-serif;
+      background: linear-gradient(to bottom right, #fce4ec, #e3f2fd);
+      color: #4E342E;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }header, footer {
+  text-align: center;
+  background-color: #F3E9DC;
+  border-top: 4px solid #B87333;
+  border-bottom: 4px solid #B87333;
+}
+
+.navbar {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.navbar a {
+  flex: 0 0 320px;
+  padding: 14px 0;
+  text-decoration: none;
+  color: goldenrod;
+  font-weight: bold;
+  border-right: 1px solid #B87333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.thumbnail {
+  max-width: 300px;
+  border: 2px solid gold;
+  box-shadow: 0 0 10px gold;
+  border-radius: 8px;
+  margin: 20px auto;
+  display: block;
+}
+
+.print-button {
+  background-color: #D7B377;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.print-button:hover {
+  background-color: #bfa87d;
+}
+
+  </style>
+  <script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.addEventListener('keydown', function(e) {
+      if (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'c')) {
+        e.preventDefault();
+      }
+      if (e.key === 'F12') {
+        e.preventDefault();
+      }
+    });function printImage(imgId) {
+  const img = document.getElementById(imgId);
+  const win = window.open('', '_blank');
+  win.document.write('<html><head><title>Print Kleurplaat</title></head><body style="text-align:center;"><img src="' + img.src + '" style="max-width:100%;"></body></html>');
+  win.document.close();
+  win.focus();
+  win.print();
+  win.close();
+}
+
+  </script>
+</head>
+<body>
+  <header>
+    <img src="../kinderen/tempel-header-logo.png" alt="Tempellogo" class="portrait">
+  </header>
+  <div class="navbar">
+    <a href="../../index.html">Home</a>
+    <a href="../../rituelen/rituelen.html">Rituelen en Levensstijl</a>
+    <a href="../../muziek/muziek.html">Muziek</a>
+    <a href="../../beweging/beweging.html">Beweging en Gezondheid</a>
+    <a href="../../keuken/keuken.html">In de Keuken</a>
+    <a href="../../kinderen/kinderen.html">Kinderen en innerlijk kind</a>
+    <a href="../../reis/reis.html">Op reis</a>
+    <a href="../../aarde/aarde.html">Samenleven met de Aarde</a>
+    <a href="../../overmij/overmij.html">Over mij</a>
+    <a href="../../contact/contact.html">Contact</a>
+    <a href="../../donaties/donaties.html">Donaties</a>
+  </div>
+  <div class="main">
+    <h1>Goddelijke Wezens – Kleurplaten</h1>
+    <p>Verbind je met de goddelijke vormen door kleur en licht.</p>
+    <div>
+      <img id="kleurplaat-shiva" src="kleurplaat-god-shivasaraswatijam.png" alt="Kleurplaat van Shiva" class="thumbnail">
+      <button class="print-button" onclick="printImage('kleurplaat-shiva')">Print deze kleurplaat</button>
+    </div>
+  </div>
+  <footer>
+    <img src="../kinderen/seal-of-remembrance.png" alt="Seal of Remembrance" class="footer-logo">
+    <div class="copyright">© 2025 Temple of the Inner Light</div>
+  </footer>
+</body>
+</html>
