@@ -135,10 +135,19 @@ img[src$=".png"] {
 
   <script>
 function printImage(url) {
-  var win = window.open('', '_blank');
-  win.document.write('<html><head><title>Print</title></head><body style="margin:0; -webkit-user-select: none; user-select: none;"><img src="' + url + '" onload="window.focus(); window.print(); setTimeout(() => { window.close(); }, 1000);"></body></html>');
-  win.document.close();
+  var printWindow = window.open('', '_blank');
+  printWindow.document.write('<html><head><title>Print</title></head><body style="margin:0; -webkit-user-select: none; user-select: none;"><img src="' + url + '" style="width:100%;max-width:600px;"></body></html>');
+  printWindow.document.close();
+  printWindow.focus();
+  printWindow.onload = function() {
+    printWindow.print();
+  };
+  printWindow.onafterprint = function() {
+    printWindow.close();
+    window.location.href = "buitenaards.html";
+  };
 }
+
 </script>
 <body>
   <header>
