@@ -168,11 +168,15 @@ function printImage(url) {
 
   <div class="main">
     <div class="gallery">
-      <div class="thumbnail" style="width: 369px; margin: 20px auto;">
-        <h3>Alien werkt in de tuin.</h3>
-        <img src="kleurplaat-buitenaards-aliengardening.png" alt="Alien werkt in de tuin" style="width: 108px; height: 108px; object-fit: cover; border: 2px solid gold; border-radius: 8px;">
-        <p>Vredige bijeenkomst rond een kampvuur.</p>
-        <a href="#" onclick="printImage('kleurplaat-buitenaards-aliengardening.png')">Print</a>
+      <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
+        <div class="kleurplaat-blok" style="border: 1px solid #4E342E; border-radius: 8px; padding: 10px; width: 369px; margin: 10px;">
+          <h2 style="color: #4E342E; font-family: 'Varela Round', sans-serif;">Alien Gardening</h2>
+          <img src="kleurplaat-buitenaards-aliengardening.png" alt="Kleurplaat Alien Gardening" width="108" height="108" style="border: 1px solid #D7B377;">
+          <p style="color: #4E342E; font-family: 'Varela Round', sans-serif;">Klik op de knop om de kleurplaat te openen. Gebruik daarna de print-optie van je browser (Ctrl+P op computer).</p>
+          <a href="kleurplaat-buitenaards-aliengardening.png" target="_blank">
+            <button style="padding: 10px 20px; background-color: #D7B377; border: none; color: #4E342E; font-family: 'Varela Round', sans-serif; border-radius: 4px; cursor: pointer;">Print Kleurplaat</button>
+          </a>
+        </div>
       </div>
       <div class="thumbnail" style="width: 369px; margin: 20px auto;">
         <h3>Alien kindjes spelen.</h3>
