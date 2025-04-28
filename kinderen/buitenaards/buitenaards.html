@@ -135,8 +135,9 @@ img[src$=".png"] {
 
   <script>
 function printImage(url) {
-  var win = window.open('');
-  win.document.write('<img src="' + url + '" onload="setTimeout(function(){win.print();}, 500)">');
+  var win = window.open('', '_blank');
+  win.document.write('<html><head><title>Print</title></head><body style="margin:0; -webkit-user-select: none; user-select: none;"><img src="' + url + '" onload="window.focus(); window.print(); setTimeout(() => { window.close(); }, 1000);"></body></html>');
+  win.document.close();
 }
 </script>
 <body>
