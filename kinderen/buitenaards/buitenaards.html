@@ -131,11 +131,13 @@ img[src$=".png"] {
       e.preventDefault();
     }
   });
-  function printImage(src) {
-    var win = window.open('');
-    win.document.write('<img src="' + src + '" onload="window.print();window.close()">');
-    win.document.close();
-  }
+  </script>
+
+  <script>
+function printImage(url) {
+  var win = window.open('');
+  win.document.write('<img src="' + url + '" onload="setTimeout(function(){win.print();}, 500)">');
+}
 </script>
 <body>
   <header>
