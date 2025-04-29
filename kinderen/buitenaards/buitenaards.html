@@ -133,22 +133,6 @@ img[src$=".png"] {
   });
   </script>
 
-  <script>
-function printImage(url) {
-  var printWindow = window.open('', '_blank');
-  printWindow.document.write('<html><head><title>Print</title></head><body style="margin:0; -webkit-user-select: none; user-select: none;"><img src="' + url + '" style="width:100%;max-width:600px;"></body></html>');
-  printWindow.document.close();
-  printWindow.focus();
-  printWindow.onload = function() {
-    printWindow.print();
-  };
-  printWindow.onafterprint = function() {
-    printWindow.close();
-    window.location.href = "buitenaards.html";
-  };
-}
-
-</script>
 <body>
   <header>
     <img alt="Tempellogo" class="portrait no-click" src="../../tempel-header-logo.png"/>
@@ -168,21 +152,12 @@ function printImage(url) {
 
   <div class="main">
     <div class="gallery">
-      <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
-        <div class="kleurplaat-blok" style="border: 1px solid #4E342E; border-radius: 8px; padding: 10px; width: 369px; margin: 10px;">
-          <h2 style="color: #4E342E; font-family: 'Varela Round', sans-serif;">Alien Gardening</h2>
+      <div class="kleurplaat-blok" style="border: 1px solid #4E342E; border-radius: 8px; padding: 10px; width: 369px; margin: 10px auto; text-align: center;">
+        <h2 style="color: #4E342E; font-family: 'Varela Round', sans-serif;">Alien Gardening</h2>
+        <a href="kleurplaat-buitenaards-aliengardening.pdf" target="_blank">
           <img src="kleurplaat-buitenaards-aliengardening.png" alt="Kleurplaat Alien Gardening" width="108" height="108" style="border: 1px solid #D7B377;">
-          <p style="color: #4E342E; font-family: 'Varela Round', sans-serif;">Klik op de knop om de kleurplaat te openen. Gebruik daarna de print-optie van je browser (Ctrl+P op computer).</p>
-          <a href="kleurplaat-buitenaards-aliengardening.png" target="_blank">
-            <button style="padding: 10px 20px; background-color: #D7B377; border: none; color: #4E342E; font-family: 'Varela Round', sans-serif; border-radius: 4px; cursor: pointer;">Print Kleurplaat</button>
-          </a>
-        </div>
-      </div>
-      <div class="thumbnail" style="width: 369px; margin: 20px auto;">
-        <h3>Alien kindjes spelen.</h3>
-        <img src="kleurplaat-buitenaards-alienkidsplay.png" alt="Kleurplaat Alien Kindjes" style="width: 108px; height: 108px; object-fit: cover; border: 2px solid gold; border-radius: 8px;">
-        <p>Alien kinderen spelen op de maan.</p>
-        <a href="#" onclick="printImage('kleurplaat-buitenaards-alienkidsplay.png')">Print</a>
+        </a>
+        <p style="color: #4E342E; font-family: 'Varela Round', sans-serif;">Klik op de afbeelding om te openen. Gebruik daarna de printoptie van je apparaat.</p>
       </div>
       <!-- Voeg hier per subfolder/colorplaat een thumbnail toe -->
     </div>
