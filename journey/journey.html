@@ -185,10 +185,12 @@ overflow-x: hidden;
         </p>
       </div>
 
-      <footer>
-        <img alt="Seal of Remembrance" class="footer-logo no-click" src="../seal-of-remembrance.png"/>
-        <div class="copyright">© 2025 Temple of the Inner Light</div>
-      </footer>
-    
+    <footer>
+    <img alt="Seal of Remembrance" class="footer-logo no-click" src="seal-of-remembrance.png"/>
+    <div class="copyright">© <span id="year"></span> Temple of the Inner Light</div>
+  </footer>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
     </body>
     </html>

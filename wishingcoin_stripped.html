@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="nl" style="margin: 0; padding: 0; overflow-x: hidden;">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wishing Coin – Temple of the Inner Light</title>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"/>
+  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID_HERE&currency=EUR&components=buttons,funding-eligibility&enable-funding=paypal,card,credit,googlepay,venmo,sofort,mybank"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      background: linear-gradient(to bottom right, #fff3e0, #e1f5fe);
+      font-family: 'Varela Round', sans-serif;
+      color: #4E342E;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    .main {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .donation-form {
+      margin: 30px 0;
+    }
+    .donation-form input[type="number"] {
+      padding: 10px;
+      font-size: 16px;
+      width: 150px;
+      text-align: center;
+      border: 2px solid #B87333;
+      border-radius: 6px;
+      background-color: #fffaf0;
+      color: #4E342E;
+    }
+    .paypal-section {
+      margin: 20px auto;
+      max-width: 400px;
+    }
+    .footer {
+      background-color: #f3e9dc;
+      padding: 10px;
+      text-align: center;
+      border-top: 4px solid #bfa87d;
+      border-bottom: 4px solid #bfa87d;
+    }
+    .footer-logo {
+      box-shadow: 0 0 10px gold;
+      border: 1px solid gold;
+      border-radius: 8px;
+      max-width: 18px;
+      margin-bottom: 10px;
+    }
+    .copyright {
+      color: #4E342E;
+      font-size: 0.9em;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main">
+    <h1>Wishing Coin</h1>
+    <p>Wil je bijdragen aan de Tempel van het Innerlijk Licht?<br/>
+    Jouw gift helpt bij het realiseren van deze heilige digitale ruimte.</p>
+    <p>Dank je wel voor jouw liefdevolle bijdrage. Kies hieronder zelf een bedrag en betaal via jouw gewenste methode:</p>
+
+    <div class="donation-form">
+      <label for="donation-amount">Donatiebedrag (EUR):</label><br/>
+      <input id="donation-amount" type="number" min="1" step="0.50" value="5.00" />
+    </div>
+
+    <div id="paypal-button-container" class="paypal-section"></div>
+
+    <script>
+      paypal.Buttons({
+        style: {
+          layout: 'vertical',
+          color: 'gold',
+          shape: 'rect',
+          label: 'donate'
+        },
+        createOrder: function(data, actions) {
+          var amount = document.getElementById('donation-amount').value;
+          return actions.order.create({
+            purchase_units: [{
+              amount: {
+                value: amount
+              }
+            }]
+          });
+        },
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+            window.location.href = "thanks.html";
+          });
+        }
+      }).render('#paypal-button-container');
+    </script>
+  </div>
+
+  <footer>
+    <img alt="Seal of Remembrance" class="footer-logo no-click" src="seal-of-remembrance.png"/>
+    <div class="copyright">© <span id="year"></span> Temple of the Inner Light</div>
+  </footer>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

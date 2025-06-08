@@ -199,6 +199,11 @@ overflow-x: hidden;
       <p>Dit is het domein van de gidsen, de zielen die door de tijden heen wijsheid, liefde en inzicht brachten. Hun verhalen en levens inspireren om het eigen licht te volgen. Kleurplaten hier nodigen uit tot verbinding met hun essentie.</p>
     </section>
     <div class="symbol">♥</div>
+        <section id="lightbearers">
+      <a href="lightbearers/lightbearers.html" class="category-link">Lichtdragers, wakker geworden en toegewijde zielen </a>
+      <p>Dit is het domein van zielen die het goddelijke licht uitdragen in eenvoud en devotie. Door hun daden, gebeden of voorbeeld lieten zij een spoor van liefde achter op aarde. Deze kleurplaten nodingen uit tot verbinding met hun stille kracht en hartsgloed.</p>
+    </section>
+    <div class="symbol">♥</div>
     <section id="holidays">
       <a href="holidays/holidays.html" class="category-link">Heilige Feestdagen en Oudse Vieringen</a>
       <p>De ritmes van het jaar, de cirkels van het leven. Hier vind je vieringen van licht, seizoenen en tradities die ons verbinden met het grotere geheel. Kleurplaten die de feestelijke momenten van het jaar vieren en het hart openen voor cycli van natuur en cultuur.</p>
@@ -225,8 +230,11 @@ overflow-x: hidden;
     </section>
   </div>
   <footer>
-    <img src="../seal-of-remembrance.png" alt="Seal of Remembrance" class="footer-logo no-click"/>
-    <div class="copyright">© 2025 Temple of the Inner Light</div>
+    <img alt="Seal of Remembrance" class="footer-logo no-click" src="seal-of-remembrance.png"/>
+    <div class="copyright">© <span id="year"></span> Temple of the Inner Light</div>
   </footer>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
